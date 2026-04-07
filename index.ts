@@ -1,1 +1,1 @@
-export { useIsHydrated } from './use-is-hydrated';
+export { useEffectEvent } from './use-effect-event';

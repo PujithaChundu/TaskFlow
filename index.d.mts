@@ -1,20 +1,16 @@
-declare const canUseDOM: boolean;
-declare function composeEventHandlers<E extends {
-    defaultPrevented: boolean;
-}>(originalEventHandler?: (event: E) => void, ourEventHandler?: (event: E) => void, { checkForDefaultPrevented }?: {
-    checkForDefaultPrevented?: boolean | undefined;
-}): (event: E) => void;
-declare function getOwnerWindow(element: Node | null | undefined): Window & typeof globalThis;
-declare function getOwnerDocument(element: Node | null | undefined): Document;
+type Measurable = {
+    getBoundingClientRect(): DOMRect;
+};
 /**
- * Lifted from https://github.com/ariakit/ariakit/blob/main/packages/ariakit-core/src/utils/dom.ts#L37
- * MIT License, Copyright (c) AriaKit.
+ * Observes an element's rectangle on screen (getBoundingClientRect)
+ * This is useful to track elements on the screen and attach other elements
+ * that might be in different layers, etc.
  */
-declare function getActiveElement(node: Node | null | undefined, activeDescendant?: boolean): HTMLElement | null;
-declare function isFrame(element: Element): element is HTMLIFrameElement;
+declare function observeElementRect(
+/** The element whose rect to observe */
+elementToObserve: Measurable, 
+/** The callback which will be called when the rect changes */
+callback: CallbackFn): () => void;
+type CallbackFn = (rect: DOMRect) => void;
 
-type Timeout = ReturnType<typeof setTimeout>;
-type Interval = ReturnType<typeof setInterval>;
-type Immediate = ReturnType<typeof setImmediate>;
-
-export { type Immediate, type Interval, type Timeout, canUseDOM, composeEventHandlers, getActiveElement, getOwnerDocument, getOwnerWindow, isFrame };
+export { type Measurable, observeElementRect };
