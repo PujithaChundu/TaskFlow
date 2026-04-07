@@ -1,0 +1,52 @@
+{
+  "hash": "8680b4ce",
+  "configHash": "c5b567eb",
+  "lockfileHash": "2112fa94",
+  "browserHash": "75e63a7c",
+  "optimized": {
+    "react": {
+      "src": "../../.pnpm/react@19.2.4/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "ab6e0ef2",
+      "needsInterop": true
+    },
+    "react-dom": {
+      "src": "../../.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "fd8400b1",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../.pnpm/react@19.2.4/node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "54fd9845",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../.pnpm/react@19.2.4/node_modules/react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "46045a13",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "38e13118",
+      "needsInterop": true
+    },
+    "recharts": {
+      "src": "../../.pnpm/recharts@2.15.4_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/recharts/es6/index.js",
+      "file": "recharts.js",
+      "fileHash": "5fdf989c",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-FKEDPS2U": {
+      "file": "chunk-FKEDPS2U.js"
+    },
+    "chunk-2NLLWSP4": {
+      "file": "chunk-2NLLWSP4.js"
+    }
+  }
+}
